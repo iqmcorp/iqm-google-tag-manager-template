@@ -15,5 +15,5 @@
 homepage: 'https://www.iqm.com'
 documentation: 'https://help.iqm.com'
 versions:
-  - sha: 55e77f469561d8b9fd95bde0dd540a70e1f847cd
+  - sha: d41549ccd80d8f43528d152af553848c26d6b181
     changeNotes: Initial Version
