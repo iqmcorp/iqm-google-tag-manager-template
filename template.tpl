@@ -1,4 +1,4 @@
-﻿___TERMS_OF_SERVICE___
+___TERMS_OF_SERVICE___
 
 By creating or modifying this file you agree to Google Tag Manager's Community
 Template Gallery Developer Terms of Service available at
@@ -59,7 +59,8 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 const queryPermission = require('queryPermission');
 const injectScript = require('injectScript');
-const url = 'https://pxl.iqm.com/' + (data.pixelType == 'conversion' ? 'i/pixel/' : 'c/' ) + data.pixelId;
+const encodeUri = require('encodeUri');
+const url = 'https://pxl.iqm.com/' + (data.pixelType == 'conversion' ? 'i/pixel/' : 'c/' ) + encodeUri(data.pixelId);
 if (queryPermission('inject_script', url)) {
   injectScript(url, data.gtmOnSuccess, data.gtmOnFailure);
 }
